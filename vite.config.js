@@ -1,18 +1,27 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
 	plugins: [react()],
 	css: {
 		preprocessorOptions: {
 			scss: {
-				api: 'modern-compiler', // Utilise l'API moderne de Sass pour de meilleures performances
-				// charset: false, // Évite les avertissements de charset
-				// sassOptions: {
-
-				// 	outputStyle: 'compressed', // Optimise la sortie CSS
-				// },
+				api: 'modern-compiler',
 			},
+		},
+	},
+
+	resolve: {
+		alias: {
+			'@abstracts': path.resolve(
+				__dirname,
+				'./src/assets/styles/abstracts'
+			),
+			// '@colors': path.resolve(
+			// 	__dirname,
+			// 	'./src/assets/styles/abstracts/colors'
+			// ),
 		},
 	},
 });
