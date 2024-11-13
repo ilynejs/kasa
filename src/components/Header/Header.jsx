@@ -1,20 +1,23 @@
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
 	return (
-		<header>
-			<h1>Header</h1>
+		<header className="header">
+			<img
+				src="/src/assets/img/logo-pink.png"
+				alt="Logo Kasa"
+				className="header__logo"
+			/>
 
-			<nav>
-				<ul>
-					<li>
+			<nav className="header__nav">
+				<ul className="header__nav__list">
+					<li className="header__nav__list-item">
 						<NavLink to="/">Accueil</NavLink>
-						{/* <Link>Test</Link> */}
 					</li>
 
-					<li>
-						<NavLink to="/about">À propos</NavLink>
+					<li className="header__nav__list-item">
+						<NavLink to="/about">A propos</NavLink>
 					</li>
 				</ul>
 			</nav>
