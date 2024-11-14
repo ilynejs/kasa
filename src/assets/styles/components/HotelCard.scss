@@ -1,0 +1,70 @@
+@use '@abstracts' as *;
+
+.hotel-card {
+	position: relative;
+
+	aspect-ratio: 1 / 1;
+	// min-width: 340px;
+
+	border-radius: 10px;
+	overflow: hidden;
+
+	&__cover {
+		&__img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: rgb(255, 255, 255);
+			background: -moz-linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(10, 10, 10, 0) 42%,
+				rgba(4, 4, 4, 0.41) 100%,
+				rgba(0, 0, 0, 1) 100%
+			);
+			background: -webkit-linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(10, 10, 10, 0) 42%,
+				rgba(4, 4, 4, 0.41) 100%,
+				rgba(0, 0, 0, 1) 100%
+			);
+			background: linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(10, 10, 10, 0) 42%,
+				rgba(4, 4, 4, 0.41) 100%,
+				rgba(0, 0, 0, 1) 100%
+			);
+		}
+	}
+
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		color: white;
+
+		font-size: 1.8rem;
+		line-height: 1.426;
+	}
+}
+
+@media screen and (max-width: $medium-screen) {
+	.hotel-card {
+		aspect-ratio: 335/255;
+	}
+}
