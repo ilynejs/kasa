@@ -1,6 +1,6 @@
-import Banner from '../components/main/Banner';
-import HotelCard from '../components/main/HotelCard';
-import logements from '../data/logements.json';
+import Banner from '@components/Banner';
+import HotelCard from '@components/HotelCard';
+import logements from '@data/logements.json';
 
 const Home = () => {
 	return (

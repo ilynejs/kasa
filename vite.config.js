@@ -14,10 +14,16 @@ export default defineConfig({
 
 	resolve: {
 		alias: {
+			'@assets': path.resolve(__dirname, './src/assets'),
+
 			'@abstracts': path.resolve(
 				__dirname,
 				'./src/assets/styles/abstracts'
 			),
+
+			'@components': path.resolve(__dirname, './src/components'),
+
+			'@data': path.resolve(__dirname, './src/data'),
 		},
 	},
 });
