@@ -18,10 +18,6 @@ export default defineConfig({
 				__dirname,
 				'./src/assets/styles/abstracts'
 			),
-			// '@colors': path.resolve(
-			// 	__dirname,
-			// 	'./src/assets/styles/abstracts/colors'
-			// ),
 		},
 	},
 });
