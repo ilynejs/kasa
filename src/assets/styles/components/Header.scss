@@ -20,6 +20,12 @@
 	}
 }
 
+@media screen and (max-width: $large-screen) {
+	.header {
+		padding: 50px 50px 0;
+	}
+}
+
 @media screen and (max-width: $medium-screen) {
 	.header {
 		padding: 20px 20px 0;
