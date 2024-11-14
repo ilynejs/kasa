@@ -1,12 +1,23 @@
-import Banner from '../components/main/Banner';
+import Banner from '@components/Banner';
+import Collapse from '@components/Collapse';
+import collapses from '@data/about-collapses.json';
 
 const about = () => {
 	return (
 		<>
 			<Banner page={'about'} />
 
-			<h1>About</h1>
-			<p>This is the about page</p>
+			<div className="about-center">
+				<section className="collapses">
+					{collapses.map((collapse) => (
+						<Collapse
+							key={collapse.title}
+							title={collapse.title}
+							content={collapse.content}
+						/>
+					))}
+				</section>
+			</div>
 		</>
 	);
 };
