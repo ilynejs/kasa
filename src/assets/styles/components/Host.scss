@@ -1,0 +1,46 @@
+@use '@abstracts' as *;
+
+.host {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 10px;
+
+	max-width: 167px;
+
+	&__name {
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: $primary;
+
+		text-wrap: wrap;
+		text-align: right;
+	}
+
+	&__picture {
+		aspect-ratio: 1/1;
+		width: 64px;
+		border-radius: 50%;
+	}
+}
+
+@media screen and (max-width: $medium-screen) {
+	.host {
+		&__name {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media screen and (max-width: $small-screen) {
+	.host {
+		&__name {
+			font-size: 1.2rem;
+		}
+
+		&__picture {
+			width: 32px;
+		}
+	}
+}

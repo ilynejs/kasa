@@ -1,0 +1,20 @@
+@use '@abstracts' as *;
+
+.tag {
+	padding: 5px 30px;
+	border-radius: 10px;
+	width: fit-content;
+
+	font-size: 1.4rem;
+	font-weight: 700;
+
+	background: $primary;
+	color: $text-tag;
+}
+
+@media screen and (max-width: $small-screen) {
+	.tag {
+		border-radius: 5px;
+		font-size: 1rem;
+	}
+}
