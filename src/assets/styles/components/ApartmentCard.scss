@@ -1,6 +1,6 @@
 @use '@abstracts' as *;
 
-.hotel-card {
+.apartment-card {
 	position: relative;
 
 	aspect-ratio: 1 / 1;
@@ -59,7 +59,6 @@
 		color: white;
 
 		font-size: 1.8rem;
-		line-height: 1.426;
 	}
 }
 
