@@ -1,0 +1,31 @@
+@use '@abstracts' as *;
+
+.rating {
+	display: flex;
+	gap: 5px;
+
+	&__star {
+		aspect-ratio: 1;
+		width: 3.6rem;
+	}
+}
+
+@media screen and (max-width: $medium-screen) {
+	.rating {
+		gap: 3px;
+
+		&__star {
+			width: 2.4rem;
+		}
+	}
+}
+
+@media screen and (max-width: $small-screen) {
+	.rating {
+		gap: 2px;
+
+		&__star {
+			width: 1.8rem;
+		}
+	}
+}
