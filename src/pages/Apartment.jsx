@@ -1,22 +1,12 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import apartments from '@data/apartments.json';
+import { useLoaderData } from 'react-router-dom';
 import Slideshow from '@components/Slideshow';
 import Tag from '@components/Tag';
 import Host from '@components/Host';
 import Rating from '@components/Rating';
 import Collapse from '@components/Collapse';
-import { useEffect } from 'react';
 
 const Apartment = () => {
-	const { id } = useParams();
-	const navigate = useNavigate();
-	const apartment = apartments.find((apartment) => apartment.id === id);
-
-	useEffect(() => {
-		if (!apartment) {
-			navigate('/error');
-		}
-	}, [apartment, navigate]);
+	const apartment = useLoaderData();
 
 	const rating = parseInt(apartment.rating);
 
