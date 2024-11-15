@@ -1,0 +1,54 @@
+@use '@abstracts' as *;
+
+.error {
+	&__center {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 140px;
+
+		padding: 0 40px;
+		min-height: 60vh;
+
+		color: $primary;
+	}
+
+	&__title {
+		font-size: 26.3rem;
+		font-weight: 700;
+	}
+
+	&__details {
+		font-size: 3.6rem;
+		font-weight: 500;
+		line-height: 1.426;
+	}
+}
+
+.back {
+	font-size: 1.8rem;
+	font-weight: 500;
+
+	color: $text;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: $medium-screen) {
+	.error {
+		&__center {
+			gap: 110px;
+		}
+
+		&__title {
+			font-size: 9.6rem;
+		}
+
+		&__details {
+			width: 100%;
+
+			font-size: 1.8rem;
+			text-align: center;
+		}
+	}
+}

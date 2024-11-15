@@ -1,17 +1,29 @@
-import { NavLink } from 'react-router-dom';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import { Link } from 'react-router-dom';
+import { useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
+	const error = useRouteError();
+	// console.log(error);
+
 	return (
 		<>
-			<h1 className="error-title">404</h1>
+			<Header />
 
-			<p className="error-detail">
-				Oups! La page que vous demandez n'existe pas.
-			</p>
+			<div className="error__center">
+				<h1 className="error__title">{error.status}</h1>
 
-			<NavLink className="back" to="/">
-				Retour à la page d'accueil
-			</NavLink>
+				<p className="error__details">
+					Oups! La page que vous demandez n'existe pas.
+				</p>
+
+				<Link className="back" to="/">
+					Retour à la page d'accueil
+				</Link>
+			</div>
+
+			<Footer />
 		</>
 	);
 };
