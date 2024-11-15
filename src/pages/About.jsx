@@ -1,6 +1,6 @@
 import Banner from '@components/Banner';
 import Collapse from '@components/Collapse';
-import collapses from '@data/about-collapses.json';
+import aboutDatas from '@data/about.json';
 
 const about = () => {
 	return (
@@ -9,11 +9,11 @@ const about = () => {
 
 			<div className="about-center">
 				<section className="collapses">
-					{collapses.map((collapse) => (
+					{aboutDatas.map((data) => (
 						<Collapse
-							key={collapse.title}
-							title={collapse.title}
-							content={collapse.content}
+							key={data.title}
+							title={data.title}
+							content={data.content}
 						/>
 					))}
 				</section>
