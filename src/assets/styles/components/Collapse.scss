@@ -9,6 +9,7 @@
 	background: $bg-collapse-content;
 	border-radius: 5px;
 
+	width: 100%;
 	max-height: 54px;
 	overflow: hidden;
 
@@ -57,7 +58,6 @@
 		background-color: $bg-collapse-content;
 		font-size: 1.8rem;
 		font-weight: 400;
-		line-height: 1.426;
 		color: $text-collapse-content;
 		transition: transform 0.3s ease-out, height 0.3s ease-out;
 		&--open {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import icon from '@assets/icons/arrow.png';
+import collapseArrow from '@assets/icons/collapse-arrow.png';
 
 const Collapse = ({ title, content }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const Collapse = ({ title, content }) => {
 					<h2 className="collapse__header__title">{title}</h2>
 
 					<img
-						src={icon}
+						src={collapseArrow}
 						alt="arrow icon"
 						className={
 							isOpen
