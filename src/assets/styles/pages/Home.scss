@@ -1,7 +1,7 @@
 @use '@abstracts' as *;
 
 .home {
-	&__hotel-cards {
+	&__apartment-cards {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 		gap: 60px;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: $large-screen) {
-	.home__hotel-cards {
+	.home__apartment-cards {
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 20px;
 		padding: 20px;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (max-width: $medium-screen) {
-	.home__hotel-cards {
+	.home__apartment-cards {
 		gap: 20px;
 		padding: 0;
 
@@ -30,11 +30,9 @@
 }
 
 @media screen and (max-width: $small-screen) {
-	.home__hotel-cards {
+	.home__apartment-cards {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-
-		// width: 100%;
 	}
 }
