@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Card = ({ apartment }) => {
+const ApartmentCard = ({ apartment }) => {
 	return (
 		<Link to={`/apartment/${apartment.id}`} className="apartment-card">
 			<article className="apartment-card">
@@ -20,4 +20,4 @@ const Card = ({ apartment }) => {
 	);
 };
 
-export default Card;
+export default ApartmentCard;
