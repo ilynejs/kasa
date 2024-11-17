@@ -14,6 +14,7 @@ Kasa est une application web de location d’appartements entre particuliers.
 
 - `assets/styles` : Contient les fichiers de styles SCSS.
 - `components` : Contient les composants React réutilisables.
+- `pages` : Contient les pages de l'application.
 - `data` : Contient les fichiers JSON avec les données de l'application.
 - `routes` : Contient les définitions des routes de l'application.
 
